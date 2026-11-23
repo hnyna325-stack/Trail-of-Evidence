@@ -1,0 +1,276 @@
+/* ===== THE SUSPECTS PAGE ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.suspects-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(#e8d8ccbb, #e8d8ccbb),
+        url("investigation-room.jpeg") center/cover fixed;
+    color: #321b19;
+    padding: 25px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Header */
+
+.case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.case-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 23px;
+    line-height: 0.95;
+    font-weight: bold;
+}
+
+.case-logo span {
+    font-size: 52px;
+    color: #49352f;
+}
+
+.page-badge {
+    background: #591526;
+    color: white;
+    padding: 12px 45px;
+    border-radius: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.case-header nav a {
+    text-decoration: none;
+    color: #321b19;
+}
+
+.case-header nav a:hover {
+    color: #781c31;
+}
+
+.case-header .home-icon {
+    font-size: 36px;
+}
+
+/* Main Content */
+
+.suspects-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.suspects-title {
+    font-size: 42px;
+    font-weight: normal;
+    color: #321b19;
+    margin-bottom: 40px;
+}
+
+/* Suspects Grid */
+
+.suspects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.suspect-card {
+    width: 280px;
+    background: #e8d9ce;
+    border: 1px solid #c8b3a5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 5px 8px 18px #3c241e30;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.suspect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 12px 22px #3c241e45;
+}
+
+/* Silhouette Avatar Box */
+
+.suspect-avatar {
+    height: 210px;
+    background: linear-gradient(to bottom, #8d7f78, #a99b93);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid #c8b3a5;
+}
+
+.suspect-avatar i {
+    font-size: 165px;
+    color: #1f1918;
+    margin-bottom: -12px;
+}
+
+/* Suspect Info */
+
+.suspect-info {
+    padding: 20px 18px;
+    text-align: center;
+}
+
+.suspect-info h2 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #321b19;
+    margin-bottom: 8px;
+}
+
+.suspect-info p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #49352f;
+}
+
+/* Footer Buttons */
+
+.suspects-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.suspects-footer button {
+    border-radius: 40px;
+    padding: 14px 32px;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-back {
+    background: #e8d9ce;
+    color: #321b19;
+    border: 1px solid #9b8073;
+}
+
+.btn-back:hover {
+    background: #dcc7b8;
+}
+
+.btn-back span {
+    margin-right: 10px;
+}
+
+.btn-next {
+    background: #591526;
+    color: white;
+    border: none;
+}
+
+.btn-next:hover {
+    background: #781c31;
+}
+
+.btn-next span {
+    margin-left: 10px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .case-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .suspects-title {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .suspect-card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .suspects-footer {
+        margin-top: 30px;
+    }
+}
+.suspect-avatar svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* ===== FOOTER BUTTONS (NEXT & BACK) ===== */
+
+.suspects-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+/* التنسيق المشترك للزرين */
+.suspects-footer a,
+.suspects-footer button {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 14px 32px;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* زر السابق (Back) */
+.btn-back {
+    background: #e8d9ce;
+    color: #321b19;
+    border: 1px solid #9b8073;
+}
+
+.btn-back:hover {
+    background: #dcc7b8;
+    transform: translateX(-3px); /* حركة بسيطة لليسار عند التمرير */
+}
+
+.btn-back span {
+    margin-right: 10px;
+}
+
+/* زر التالي (Next) */
+.btn-next {
+    background: #591526;
+    color: #ffffff;
+    border: 1px solid #591526;
+}
+
+.btn-next:hover {
+    background: #781c31;
+    border-color: #781c31;
+    transform: translateX(3px); /* حركة بسيطة لليمين عند التمرير */
+}
+
+.btn-next span {
+    margin-left: 10px;
+}

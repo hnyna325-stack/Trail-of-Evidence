@@ -1,0 +1,273 @@
+/* إعدادات الصفحة العامة والخلفية المطابقة لهويتك */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background:
+        linear-gradient(#e8d8ccbb, #e8d8ccbb),
+        url("investigation-room.jpeg") center/cover fixed;
+    color: #321b19;
+    position: relative;
+    overflow-x: hidden;
+    padding: 25px 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* البصمة الكبيرة الزخرفية في الخلفية يساراً */
+.bg-fingerprint {
+    position: fixed;
+    left: -60px;
+    bottom: 40px;
+    font-size: 320px;
+    color: rgba(50, 27, 25, 0.12);
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* الشريط العلوي (Header / Navbar) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo i {
+    font-size: 50px;
+    color: #321b19;
+}
+
+.logo-text {
+    font-family: 'Lora', serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 0.95;
+    color: #321b19;
+}
+
+/* أزرار التنقل العلوية */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #321b19;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    padding: 10px 28px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+nav a.active {
+    background-color: #591526;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(89, 21, 38, 0.25);
+}
+
+nav a:not(.active):hover {
+    color: #781c31;
+    background-color: rgba(89, 21, 38, 0.08);
+}
+
+/* أيقونة المنزل المطابقة للصورة */
+.home-icon {
+    font-size: 32px;
+    color: #321b19;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.home-icon:hover {
+    color: #591526;
+    transform: scale(1.1);
+}
+
+/* القسم الرئيسي والعنوان */
+main {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    color: #591526;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    color: #321b19;
+    margin-bottom: 45px;
+}
+
+/* شبكة بطاقات الأدلة (Polaroid Cards) */
+.evidence-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.polaroid {
+    background-color: #e9ded5;
+    border: 1px solid #c8b3a5;
+    padding: 16px 16px 22px 16px;
+    width: 250px;
+    box-shadow: 4px 8px 20px #29171355;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* تأثير شريط اللصق أعلى كل صورة */
+.polaroid::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 24px;
+    background-color: rgba(200, 179, 165, 0.75);
+    box-shadow: 0 1px 3px rgba(41, 23, 19, 0.15);
+    z-index: 2;
+}
+
+/* إمالة خفيفة لكل بطاقة */
+.polaroid:nth-child(1) { transform: rotate(-2.5deg); }
+.polaroid:nth-child(2) { transform: rotate(-1deg); }
+.polaroid:nth-child(3) { transform: rotate(2deg); }
+.polaroid:nth-child(4) { transform: rotate(1.5deg); }
+
+/* حركة تفاعلية عند تمرير الماوس */
+.polaroid:hover {
+    transform: scale(1.06) rotate(0deg);
+    box-shadow: 5px 12px 25px #3c241e66;
+    z-index: 5;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #c8b3a5;
+}
+
+.polaroid-caption {
+    margin-top: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #321b19;
+}
+
+/* أزرار التنقل السفلية (Back & Next) */
+.bottom-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 55px;
+    padding-bottom: 10px;
+}
+
+.btn-back,
+.btn-next {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 13px 32px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+/* زر Back الشفاف بإطار خفيف */
+.btn-back {
+    color: #321b19;
+    border: 1.5px solid #9b8073;
+    background-color: rgba(232, 217, 206, 0.45);
+}
+
+.btn-back:hover {
+    background-color: rgba(200, 179, 165, 0.45);
+    transform: translateX(-4px);
+}
+
+/* زر Next العنابي */
+.btn-next {
+    background-color: #591526;
+    color: #ffffff;
+    border: 1.5px solid #591526;
+    box-shadow: 0 4px 12px rgba(89, 21, 38, 0.25);
+}
+
+.btn-next:hover {
+    background-color: #781c31;
+    border-color: #781c31;
+    transform: translateX(4px);
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    nav {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        padding: 8px 18px;
+        font-size: 15px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .bottom-actions {
+        margin-top: 40px;
+    }
+    .btn-back,
+    .btn-next {
+        padding: 11px 24px;
+        font-size: 15px;
+    }
+}

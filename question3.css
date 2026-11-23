@@ -1,0 +1,263 @@
+/* ===== QUESTION 3 PAGE ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.question-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(#e8d8ccbb, #e8d8ccbb),
+        url("investigation-room.jpeg") center/cover fixed;
+    color: #321b19;
+    padding: 25px 5%;
+    font-family: Georgia, serif;
+}
+
+/* Header */
+
+.case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 45px;
+}
+
+.case-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 23px;
+    line-height: 0.95;
+    font-weight: bold;
+}
+
+.case-logo span {
+    font-size: 50px;
+}
+
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.question-badge {
+    background: #591526;
+    color: white;
+    padding: 10px 28px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 2px 4px 10px #3c241e30;
+}
+
+.progress-dots {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.progress-dots .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #591526;
+    background: transparent;
+}
+
+.progress-dots .dot.active {
+    background: #591526;
+}
+
+.case-header nav a {
+    text-decoration: none;
+    color: #321b19;
+    transition: color 0.2s ease;
+}
+
+.case-header nav a:hover {
+    color: #781c31;
+}
+
+.case-header .home-icon {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+/* Main layout */
+
+.question-layout {
+    max-width: 1250px;
+    margin: auto;
+    text-align: center;
+}
+
+.question-title {
+    font-size: 38px;
+    color: #321b19;
+    margin-bottom: 40px;
+}
+
+/* Options Grid */
+
+.options-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.option-card {
+    width: 24%;
+    padding: 14px;
+    background: #e8d9ce;
+    border: 2px solid #c8b3a5;
+    border-radius: 12px;
+    box-shadow: 5px 8px 18px #3c241e30;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    border-color: #781c31;
+}
+
+.option-photo {
+    background: #e9ded5;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    box-shadow: 2px 4px 10px #29171333;
+}
+
+.option-photo img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.option-label {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #321b19;
+    margin: 5px 0;
+}
+
+/* Correct & Wrong States */
+
+.option-card.correct {
+    border-color: #2e7d32;
+    background: #dce8d5;
+    box-shadow: 0 6px 20px #2e7d3244;
+}
+
+.option-card.wrong {
+    border-color: #8b1e24;
+    background: #ebd0ce;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+/* Feedback */
+
+.feedback-msg {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 28px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+
+.question-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #9b8073;
+    padding-top: 25px;
+}
+
+.btn-back,
+.btn-next {
+    border-radius: 40px;
+    padding: 15px 32px;
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-back {
+    background: transparent;
+    color: #321b19;
+    border: 2px solid #9b8073;
+}
+
+.btn-back:hover {
+    background: #d8c6b8;
+}
+
+.btn-next {
+    background: #591526;
+    color: white;
+    border: none;
+    box-shadow: 4px 6px 15px #3c241e40;
+    /* مخفي حتى يختار المستخدم الجواب الصحيح */
+    display: none;
+}
+
+.btn-next:hover {
+    background: #781c31;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .case-header {
+        flex-direction: column;
+    }
+
+    .progress-wrapper {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .question-title {
+        font-size: 28px;
+    }
+
+    .options-grid {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .option-card {
+        width: 47%;
+    }
+
+    .option-photo img {
+        height: 130px;
+    }
+
+    .option-label {
+        font-size: 16px;
+    }
+}

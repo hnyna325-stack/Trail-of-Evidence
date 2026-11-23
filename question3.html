@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trail of Evidence - Question 3</title>
+  <link rel="stylesheet" href="question3.css">
+</head>
+<body class="question-page">
+
+  <!-- Header -->
+  <header class="case-header">
+    <div class="case-logo">
+      
+      <div>Trail of<br>Evidence</div>
+    </div>
+
+    <div class="progress-wrapper">
+      <div class="question-badge">Question 3 / 4</div>
+      <div class="progress-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html" class="home-icon" title="Home">&#8962;</a>
+    </nav>
+  </header>
+
+  <!-- Main layout -->
+  <main class="question-layout">
+    <h1 class="question-title">What does the threatening note suggest?</h1>
+
+    <!-- Options Grid -->
+    <div class="options-grid" id="optionsContainer">
+      
+      <div class="option-card" onclick="checkAnswer(this, false)">
+        <div class="option-photo">
+          <img src="note1.jpeg" alt="A personal grudge">
+        </div>
+        <p class="option-label">A personal grudge</p>
+      </div>
+
+      <!-- الجواب الصحيح -->
+      <div class="option-card" onclick="checkAnswer(this, true)">
+        <div class="option-photo">
+          <img src="note3.jpeg" alt="A work-related threat">
+        </div>
+        <p class="option-label">A work-related threat</p>
+      </div>
+
+      <div class="option-card" onclick="checkAnswer(this, false)">
+        <div class="option-photo">
+          <img src="note2.jpeg" alt="A robbery">
+        </div>
+        <p class="option-label">A robbery</p>
+      </div>
+
+      <div class="option-card" onclick="checkAnswer(this, false)">
+        <div class="option-photo">
+          <img src="note4.jpeg" alt="A warning">
+        </div>
+        <p class="option-label">A warning</p>
+      </div>
+
+    </div>
+
+    <!-- Feedback Message -->
+    <p class="feedback-msg" id="feedback"></p>
+
+    <!-- Navigation Buttons -->
+    <div class="question-nav">
+      <button class="btn-back" onclick="goBack()"><span>&larr;</span> Back</button>
+      <button class="btn-next" id="nextBtn" onclick="goNext()">Next <span>&rarr;</span></button>
+    </div>
+  </main>
+
+  <script src="question3.js"></script>
+</body>
+</html>

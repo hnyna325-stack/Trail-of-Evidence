@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail of Evidence - Question 1</title>
+    <!-- رابط خطوط جوجل الكامل -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- رابط مكتبة الأيقونات الكامل -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- ربط ملف التنسيق الخارجي -->
+    <link rel="stylesheet" href="question1.css">
+</head>
+<body>
+
+    <!-- العناصر الزخرفية في الخلفية (البصمة والميزان) -->
+    <i class="fa-solid fa-fingerprint bg-fingerprint"></i>
+    <i class="fa-solid fa-scale-balanced bg-scales"></i>
+
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-fingerprint"></i>
+            <div class="logo-text">Trail of<br>Evidence</div>
+        </div>
+
+        <!-- شارة رقم السؤال وشريط التقدم -->
+        <div class="progress-wrapper">
+            <div class="question-badge">Question 1 / 4</div>
+            <div class="progress-dots">
+                <span class="dot active"></span>
+                <span class="line"></span>
+                <span class="dot"></span>
+                <span class="line"></span>
+                <span class="dot"></span>
+                <span class="line faded"></span>
+            </div>
+        </div>
+         <nav>
+           
+            <a href="index.html" class="home-icon">⌂</a>
+      
+        </nav>
+
+        <a href="index.html" class="home-icon" title="Home">
+            <i class="fa-solid fa-house-chimney"></i>
+        </a>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <h1 class="question-title">What was the most likely weapon<br>used in the murder?</h1>
+
+        <!-- خيارات الأسلحة -->
+        <div class="options-grid">
+            <!-- الخيار الصحيح: Hammer -->
+            <div class="option-card"  onclick="checkAnswer(this,true)">
+                <div class="image-box">
+                    <img src="Hammer.jpeg" alt="Hammer">
+                </div>
+                <div class="option-label">Hammer</div>
+            </div>
+
+            <!-- خيار خاطئ: Knife -->
+            <div class="option-card" data-correct="false" onclick="checkAnswer(this)">
+                <div class="image-box">
+                    <img src="Knife.jpeg" alt="Knife">
+                </div>
+                <div class="option-label">Knife</div>
+            </div>
+
+            <!-- خيار خاطئ: Gun -->
+            <div class="option-card" data-correct="false" onclick="checkAnswer(this)">
+                <div class="image-box">
+                    <img src="Gun.jpeg" alt="Gun">
+                </div>
+                <div class="option-label">Gun</div>
+            </div>
+        </div>
+
+        <!-- رسالة نتيجة الاختيار -->
+        <p id="feedback-msg" class="feedback-msg"></p>
+
+        <!-- أزرار التنقل السفلية -->
+        <div class="bottom-actions">
+            <a href="suspects.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+
+            <!-- زر Next مخفي افتراضياً ويظهر فقط عند الإجابة الصحيحة -->
+            <a href="question2.html" id="next-btn" class="btn-next hidden">
+                Next <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- ربط ملف الجافاسكربت -->
+    <script src="question1.js"></script>
+</body>
+</html>

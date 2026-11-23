@@ -1,0 +1,154 @@
+/* ===== CASE UNSOLVED PAGE ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.unsolved-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at center, rgba(20, 14, 13, 0.58) 0%, rgba(15, 10, 9, 0.88) 100%),
+        url("bac.jpeg") center/cover no-repeat fixed;
+    color: #e8ded7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.result-container {
+    max-width: 680px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cross Mark & Laurel Wreath */
+
+.mark-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: -15px;
+}
+
+.laurel {
+    width: 85px;
+    height: 155px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.cross-icon {
+    font-size: 90px;
+    color: #5e131e;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6));
+    margin-bottom: 20px;
+}
+
+/* Main Title */
+
+.unsolved-title {
+    font-size: 58px;
+    font-weight: bold;
+    color: #dfd6cf;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+/* Killer Banner */
+
+.stalled-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #e6d8ce;
+    margin-bottom: 14px;
+}
+
+.killer-banner {
+    background: linear-gradient(90deg, transparent 0%, #591526 12%, #591526 88%, transparent 100%);
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 12px 65px;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Message */
+
+.unsolved-message {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0d4cc;
+    margin-bottom: 35px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Try Again Button */
+
+.btn-try-again {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #3d141a;
+    color: #ffffff;
+    border: 2px solid #8a7368;
+    border-radius: 50px;
+    padding: 16px 42px;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.25s ease;
+}
+
+.btn-try-again:hover {
+    background: #591526;
+    border-color: #c59b6d;
+    transform: translateY(-3px);
+}
+
+.btn-try-again i {
+    font-size: 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .unsolved-title {
+        font-size: 40px;
+    }
+
+    .laurel {
+        width: 60px;
+        height: 115px;
+    }
+
+    .cross-icon {
+        font-size: 65px;
+    }
+
+    .killer-banner {
+        font-size: 20px;
+        padding: 10px 35px;
+    }
+
+    .unsolved-message {
+        font-size: 16px;
+    }
+
+    .btn-try-again {
+        padding: 14px 32px;
+        font-size: 17px;
+    }
+}

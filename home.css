@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1c1513;
+    font-family: Georgia, serif;
+}
+
+.hero {
+    min-height: 720px;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+/* جهة الورقة */
+
+.paper {
+    width: 51%;
+    min-height: 100%;
+    background: #e9ded5;
+    padding: 35px 8.5%;
+    position: relative;
+    z-index: 2;
+    clip-path: polygon(
+        0 0, 100% 0,
+        97% 12%, 99% 25%,
+        95% 39%, 98% 54%,
+        94% 69%, 96% 83%,
+        91% 100%, 0 100%
+    );
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #251816;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 0.95;
+}
+
+.fingerprint {
+    font-size: 55px;
+}
+
+/* العنوان */
+
+.content {
+    margin-top: 105px;
+}
+
+.content h1 {
+    font-size: clamp(55px, 6vw, 88px);
+    line-height: 0.95;
+    color: #241715;
+}
+
+.content h1 span {
+    color: #570e21;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: #5b1427;
+    margin: 18px 0;
+}
+
+.content h2 {
+    font-size: 21px;
+    color: #291d1a;
+    margin-bottom: 35px;
+}
+
+.content p {
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    line-height: 1.6;
+    color: #211b19;
+    margin-bottom: 35px;
+}
+
+/* الزر */
+
+button {
+    background: #590f23;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 17px 30px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 12px #0003;
+}
+
+button span {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+button:hover {
+    background: #35101b;
+    transform: translateY(-3px);
+}
+
+.footer-line {
+    position: absolute;
+    bottom: 25px;
+    left: 8%;
+    width: 80%;
+    height: 2px;
+    background: #6a5550;
+}
+
+/* جهة غرفة التحقيق */
+
+.investigation-room {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    background:
+        linear-gradient(#170e0d44, #170e0dcc),
+        url("investigation-room.jpeg") center/cover no-repeat;
+}
+
+/* القسم التالي */
+
+.case-section {
+    min-height: 350px;
+    background: #241916;
+    color: #e9ded5;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.case-section h2 {
+    color: #a34b5c;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.case-section p {
+    margin: 12px;
+    font-size: 18px;
+}
+
+/* الجوال */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 750px;
+    }
+
+    .paper {
+        width: 85%;
+        padding: 30px 8%;
+    }
+
+    .investigation-room {
+        width: 100%;
+    }
+
+    .content {
+        margin-top: 100px;
+    }
+
+    .content h1 {
+        font-size: 55px;
+    }
+
+    .content h2 {
+        font-size: 16px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+}

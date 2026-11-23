@@ -1,0 +1,157 @@
+/* ===== CASE SOLVED PAGE ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.solved-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at center, rgba(20, 14, 13, 0.55) 0%, rgba(15, 10, 9, 0.85) 100%),
+        url("bac.jpeg") center/cover no-repeat fixed;
+    color: #f3e9e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.result-container {
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Trophy & Laurel Wreath */
+
+.trophy-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: -15px;
+}
+
+.laurel {
+    width: 85px;
+    height: 155px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.trophy-icon {
+    font-size: 75px;
+    color: #d4a36a;
+    background: linear-gradient(to bottom, #f2cfa0, #a8763e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6));
+    margin-bottom: 25px;
+}
+
+/* Main Title */
+
+.solved-title {
+    font-size: 62px;
+    font-weight: bold;
+    color: #f5ebe4;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+/* Killer Box */
+
+.killer-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #e6d8ce;
+    margin-bottom: 12px;
+}
+
+.killer-banner {
+    background: linear-gradient(90deg, transparent 0%, #591526 15%, #591526 85%, transparent 100%);
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 12px 90px;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Message */
+
+.solved-message {
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    line-height: 1.6;
+    color: #e8dcd4;
+    margin-bottom: 35px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Play Again Button */
+
+.btn-play-again {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #42111d;
+    color: #ffffff;
+    border: 2px solid #9b8073;
+    border-radius: 50px;
+    padding: 16px 42px;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.25s ease;
+}
+
+.btn-play-again:hover {
+    background: #6b192d;
+    border-color: #d4a36a;
+    transform: translateY(-3px);
+}
+
+.btn-play-again i {
+    font-size: 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .solved-title {
+        font-size: 44px;
+    }
+
+    .laurel {
+        width: 60px;
+        height: 115px;
+    }
+
+    .trophy-icon {
+        font-size: 55px;
+    }
+
+    .killer-banner {
+        font-size: 24px;
+        padding: 10px 55px;
+    }
+
+    .solved-message {
+        font-size: 16px;
+    }
+
+    .btn-play-again {
+        padding: 14px 32px;
+        font-size: 17px;
+    }
+}

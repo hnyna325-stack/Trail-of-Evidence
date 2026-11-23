@@ -1,0 +1,260 @@
+/* ===== QUESTION 2 PAGE ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.question-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(#e8d8ccbb, #e8d8ccbb),
+        url("investigation-room.jpeg") center/cover fixed;
+    color: #321b19;
+    padding: 25px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Header & Progress Bar */
+
+.case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.case-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 23px;
+    line-height: 0.95;
+    font-weight: bold;
+}
+
+.case-logo span {
+    font-size: 52px;
+    color: #49352f;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.page-badge {
+    background: #591526;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #9b8073;
+    background: transparent;
+}
+
+.progress-bar .dot.completed {
+    background: #591526;
+    border-color: #591526;
+}
+
+.progress-bar .dot.active {
+    border-color: #321b19;
+    background: #e8d9ce;
+}
+
+.progress-bar .line {
+    width: 45px;
+    height: 2px;
+    background: #9b8073;
+}
+
+.case-header .home-icon {
+    font-size: 36px;
+    color: #321b19;
+    text-decoration: none;
+}
+
+.case-header .home-icon:hover {
+    color: #781c31;
+}
+
+/* Main Question */
+
+.question-container {
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.question-title {
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #321b19;
+    margin-bottom: 40px;
+}
+
+/* Options Grid */
+
+.options-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.option-card {
+    width: 225px;
+    background: #e8d9ce;
+    border: 2px solid #c8b3a5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 5px 8px 18px #3c241e30;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    border-color: #9b8073;
+}
+
+/* تنسيق البطاقة عند اختيارها */
+.option-card.selected {
+    border: 3px solid #591526;
+    background: #dfcabd;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px #59152645;
+}
+
+.option-avatar {
+    height: 185px;
+    background: linear-gradient(to bottom, #8d7f78, #a99b93);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-bottom: 1px solid #c8b3a5;
+}
+
+.option-avatar svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.option-label {
+    padding: 15px 10px;
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #321b19;
+}
+
+/* Footer Buttons */
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+    min-height: 55px; /* يحافظ على ثبات الصفحة عند ظهور الزر */
+}
+
+.question-footer a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 14px 32px;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    transition: all 0.2s ease;
+}
+
+.btn-back {
+    background: #e8d9ce;
+    color: #321b19;
+    border: 1px solid #9b8073;
+}
+
+.btn-back:hover {
+    background: #dcc7b8;
+    transform: translateX(-3px);
+}
+
+.btn-back span {
+    margin-right: 10px;
+}
+
+.btn-next {
+    background: #591526;
+    color: #ffffff;
+    border: 1px solid #591526;
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-next:hover {
+    background: #781c31;
+    transform: translateX(3px);
+}
+
+.btn-next span {
+    margin-left: 10px;
+}
+
+/* إخفاء زر التالي قبل الاختيار */
+.btn-next.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .case-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-center {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .question-title {
+        font-size: 28px;
+    }
+
+    .option-card {
+        width: 46%;
+        min-width: 150px;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail of Evidence - Crime Scene</title>
+    <!-- استدعاء خطوط جوجل -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- مكتبة الأيقونات -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- ربط ملف التنسيق الخارجي -->
+    <link rel="stylesheet" href="crime-scene.css">
+</head>
+<body>
+
+    <!-- بصمة زخرفية في الخلفية -->
+    <i class="fa-solid fa-fingerprint bg-fingerprint"></i>
+
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-fingerprint"></i>
+            <div class="logo-text">Trail of<br>Evidence</div>
+        </div>
+
+        <nav>
+            <a href="crime-scene.html" class="active">Crime Scene</a>
+            <a href="index.html" class="home-icon">⌂</a>
+      
+        </nav>
+
+        <!-- أيقونة المنزل المطابقة للصورة -->
+        <a href="index.html" class="home-icon" title="Home">
+            <i class="fa-solid fa-house-chimney"></i>
+        </a>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <h1>Crime Scene</h1>
+        <p class="subtitle">Take a closer look at the evidence found at the scene.</p>
+
+        <div class="evidence-grid">
+            <!-- البطاقة الأولى -->
+            <div class="polaroid">
+                <img src="broken Mug.jpeg" alt="Broken Mug">
+                <div class="polaroid-caption">Broken Mug</div>
+            </div>
+
+            <!-- البطاقة الثانية -->
+            <div class="polaroid">
+                <img src="Threatening Note.jpeg" alt="Threatening Note">
+                <div class="polaroid-caption">Threatening Note</div>
+            </div>
+
+            <!-- البطاقة الثالثة -->
+            <div class="polaroid">
+                <img src="Hammer.jpeg" alt="Hammer">
+                <div class="polaroid-caption">Hammer</div>
+            </div>
+
+            <!-- البطاقة الرابعة -->
+            <div class="polaroid">
+                <img src="The Office.jpeg" alt="The Office">
+                <div class="polaroid-caption"> Fingerprints on the window</div>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل السفلية (Back & Next) -->
+        <div class="bottom-actions">
+            <a href="case.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <a href="suspects.html" class="btn-next">
+                Next <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>

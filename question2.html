@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail of Evidence - Question 2</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="question2.css">
+</head>
+<body>
+
+    <div class="question-page">
+        <!-- Header -->
+        <header class="case-header">
+            <div class="case-logo">
+                <span><i class="fa-solid fa-fingerprint"></i></span>
+                <div>Trail of<br>Evidence</div>
+            </div>
+
+            <!-- Question Badge & Progress Bar -->
+            <div class="header-center">
+                <div class="page-badge">Question 2 / 4</div>
+                <div class="progress-bar">
+                    <span class="dot completed"></span>
+                    <span class="line"></span>
+                    <span class="dot active"></span>
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <nav>
+                <a href="index.html" class="home-icon" title="Home">
+                    <i class="fa-solid fa-house"></i>
+                     <a href="index.html" class="home-icon">⌂</a>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Question & Options -->
+        <main class="question-container">
+            <h1 class="question-title">Who had the strongest motive<br>to harm Ahmed?</h1>
+
+            <div class="options-grid">
+                
+                <!-- Option 1 -->
+                <div class="option-card" onclick="selectOption(this, 'Khaled')">
+                    <div class="option-avatar">
+                        <svg viewBox="0 0 200 200" xmlns="http://w3.org">
+                            <path d="M100 32 C84 32 74 44 74 62 C74 70 71 72 71 77 C71 82 75 85 78 86 C81 96 86 102 88 105 L85 116 L45 130 C35 134 30 144 28 165 L25 200 L175 200 L172 165 C170 144 165 134 155 130 L115 116 L112 105 C114 102 119 96 122 86 C125 85 129 82 129 77 C129 72 126 70 126 62 C126 44 116 32 100 32 Z" fill="#1f1918"/>
+                        </svg>
+                    </div>
+                    <div class="option-label">The Victim's Colleague<br>Khaled</div>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="option-card" onclick="selectOption(this, 'Stranger')">
+                    <div class="option-avatar">
+                        <svg viewBox="0 0 200 200" xmlns="http://w3.org">
+                            <path d="M100 32 C84 32 74 44 74 62 C74 70 71 72 71 77 C71 82 75 85 78 86 C81 96 86 102 88 105 L85 116 L45 130 C35 134 30 144 28 165 L25 200 L175 200 L172 165 C170 144 165 134 155 130 L115 116 L112 105 C114 102 119 96 122 86 C125 85 129 82 129 77 C129 72 126 70 126 62 C126 44 116 32 100 32 Z" fill="#1f1918"/>
+                        </svg>
+                    </div>
+                    <div class="option-label">A Stranger</div>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="option-card" onclick="selectOption(this, 'Sara')">
+                    <div class="option-avatar">
+                        <svg viewBox="0 0 200 200" xmlns="http://w3.org">
+                            <path d="M100 30 C77 30 68 48 67 74 C66 95 62 108 58 116 C64 118 74 119 85 118 L48 132 C38 136 33 146 31 165 L28 200 L172 200 L169 165 C167 146 162 136 152 132 L115 118 C126 119 136 118 142 116 C138 108 134 95 133 74 C132 48 123 30 100 30 Z" fill="#1f1918"/>
+                        </svg>
+                    </div>
+                    <div class="option-label">The Secretary Sara</div>
+                </div>
+
+                <!-- Option 4 -->
+                <div class="option-card" onclick="selectOption(this, 'Majed')">
+                    <div class="option-avatar">
+                        <svg viewBox="0 0 200 200" xmlns="http://w3.org">
+                            <path d="M100 32 C84 32 74 44 74 62 C74 70 71 72 71 77 C71 82 75 85 78 86 C81 96 86 102 88 105 L85 116 L45 130 C35 134 30 144 28 165 L25 200 L175 200 L172 165 C170 144 165 134 155 130 L115 116 L112 105 C114 102 119 96 122 86 C125 85 129 82 129 77 C129 72 126 70 126 62 C126 44 116 32 100 32 Z" fill="#1f1918"/>
+                        </svg>
+                    </div>
+                    <div class="option-label">The Security Guard<br>Majed</div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer Navigation -->
+        <footer class="question-footer">
+            <a href="question1.html" class="btn-back">
+                <span>&larr;</span> Back
+            </a>
+
+            <!-- زر التالي: مخفي افتراضياً ويظهر عند اختيار إجابة -->
+            <a href="question3.html" id="nextBtn" class="btn-next hidden">
+                Next <span>&rarr;</span>
+            </a>
+        </footer>
+    </div>
+
+    <!-- JavaScript لإظهار زر التالي وتحديد البطاقة المختارة -->
+    <script>
+        function selectOption(selectedCard, suspectName) {
+            // 1. إزالة التحديد من جميع البطاقات
+            const allCards = document.querySelectorAll('.option-card');
+            allCards.forEach(card => card.classList.remove('selected'));
+
+            // 2. إضافة التحديد للبطاقة التي ضغط عليها المستخدم
+            selectedCard.classList.add('selected');
+
+            // 3. حفظ اختيار المستخدم (مفيد إذا أردت حساب النتيجة لاحقاً)
+            localStorage.setItem('q2_answer', suspectName);
+
+            // 4. إظهار زر التالي
+            const nextBtn = document.getElementById('nextBtn');
+            nextBtn.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
